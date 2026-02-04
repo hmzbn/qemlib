@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "qemlib"
+version = "0.1.0"
+description = "A modular quantum error mitigation library (ZNE, PT, REM)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+
+authors = [
+  { name = "Hamza Benkadour" }
+]
+
+dependencies = [
+  "numpy",
+  "scipy",
+  "matplotlib",
+  "qiskit>=1.0",
+  "qiskit-aer",
+  "qiskit-ibm-runtime"
+]
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Physics"
+]
+
+
+[tool.setuptools]
+packages = ["qemlib", "qemlib.zne"]
