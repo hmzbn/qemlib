@@ -34,4 +34,4 @@ def fold_global_circuit(circuit: QuantumCircuit, scale_factor: int) -> QuantumCi
         folded_circuit.append(inverse_circuit, folded_circuit.qubits)
         folded_circuit.append(circuit, folded_circuit.qubits)
 
-    return folded_circuit
+    return folded_circuit.decompose()
