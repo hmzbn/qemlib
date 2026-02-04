@@ -2,9 +2,7 @@ import numpy as np
 from scipy.optimize import curve_fit
 
 
-# ------------------
 # Extrapolation models
-# ------------------
 
 def linear_model(x, a, b):
     return a * x + b
