@@ -1,5 +1,5 @@
 from qiskit import QuantumCircuit
-from .pauli import random_pauli
+from .pauli import random_pauli, PAULIS_CNOT, PAULIS_ECR
 
 
 def apply_pauli(qc, p, qubit):
