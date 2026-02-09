@@ -1,2 +1,2 @@
-from .pt import run_pt
+from .runner import run_pt
 from .twirl import twirl_cx
