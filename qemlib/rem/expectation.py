@@ -59,8 +59,7 @@ def rem_expectation(circuit, observable: SparsePauliOp, executor, num_qubits):
         mitigated_probs = run_rem(
             executor,
             num_qubits,
-            rotated,
-            inv_cal
+            circuit
         )
 
         exp_val = expectation_from_probs(mitigated_probs, pauli_str)
