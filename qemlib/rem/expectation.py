@@ -36,16 +36,17 @@ def expectation_from_probs(probs, pauli_string):
 import numpy as np
 from qiskit.quantum_info import SparsePauliOp
 from .rem import run_rem
-from .calibration import build_calibration_matrix 
-from .mitigation import invert_calibration_matrix
+from .calibration import build_calibration_circuits 
+from .mitigation import calibration_matrix_from_counts, invert_calibration_matrix
 
 
 def rem_expectation(circuit, observable: SparsePauliOp, executor, num_qubits):
     """
     Compute expectation value of observable using REM.
     """
-
-    cal_matrix = build_calibration_matrix(num_qubits, executor)
+    counts_l = [executor(qc) for qc in build_calibration_circuits(num_qubits)[0]]
+    labels = build_calibration_circuits(num_qubits)[1]
+    cal_matrix = calibration_matrix_from_counts(counts_l, labels)
     inv_cal = invert_calibration_matrix(cal_matrix)
 
     total_energy = 0.0
