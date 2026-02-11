@@ -36,7 +36,8 @@ def expectation_from_probs(probs, pauli_string):
 import numpy as np
 from qiskit.quantum_info import SparsePauliOp
 from .rem import run_rem
-from .calibration import build_calibration_matrix, invert_calibration_matrix
+from .calibration import build_calibration_matrix 
+from .mitigation import invert_calibration_matrix
 
 
 def rem_expectation(circuit, observable: SparsePauliOp, executor, num_qubits):
