@@ -2,7 +2,7 @@ from .calibration import build_calibration_circuits
 from .mitigation import calibration_matrix_from_counts, invert_calibration_matrix, mitigate_counts
 
 
-def run_rem(executor, n_qubits):
+def run_rem(executor, n_qubits, circuit):
     cal_circuits, labels = build_calibration_circuits(n_qubits)
 
     counts_list = [executor(qc) for qc in cal_circuits]
@@ -14,4 +14,4 @@ def run_rem(executor, n_qubits):
         counts = executor(circuit)
         return mitigate_counts(counts, Minv, labels)
 
-    return rem_executor, M
+    return rem_executor(circuit)

@@ -32,4 +32,4 @@ def mitigate_counts(counts, Minv, labels):
     mitigated = np.clip(mitigated, 0, 1)
     mitigated /= mitigated.sum()
 
-    return dict(zip(labels, mitigated))
+    return dict(zip(labels, [float(x) for x in mitigated]))
