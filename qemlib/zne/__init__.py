@@ -7,8 +7,8 @@ from .executor import EstimatorExecutor
 __all__ = [
     "ZeroNoiseExtrapolator",
     "fold_global_circuit",
+    "EstimatorExecutor",
     "extrapolate",
     "plot_zne",
-    "run_zne",
-    EstimatorExecutor
+    "run_zne"
 ]
