@@ -10,5 +10,5 @@ __all__ = [
     "EstimatorExecutor",
     "extrapolate",
     "plot_zne",
-    "run_zne"
+    "run_zne",
 ]
