@@ -3,10 +3,12 @@ from .folding import fold_global_circuit
 from .models import extrapolate
 from .plotting import plot_zne
 from .functional import run_zne
+from .executor import EstimatorExecutor
 __all__ = [
     "ZeroNoiseExtrapolator",
     "fold_global_circuit",
     "extrapolate",
     "plot_zne",
-    "run_zne"
+    "run_zne",
+    EstimatorExecutor
 ]
