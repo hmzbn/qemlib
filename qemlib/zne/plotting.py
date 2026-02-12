@@ -4,6 +4,19 @@ from .models import extrapolate
 
 
 def plot_zne(scales, values, ref_value=None, methods=("linear",)):
+    """
+    Plots noisy expectation values and their zero-noise extrapolation fits.
+
+    Args:
+        scales: Noise scale factors.
+        values: Measured expectation values.
+        ref_value: Optional reference value to display.
+        methods: Tuple of extrapolation methods to plot.
+
+    Displays:
+        A matplotlib plot showing noisy data and fitted curves.
+    """
+    
     plt.figure(figsize=(8, 5))
     plt.plot(scales, values, "o", label="Noisy data")
 
