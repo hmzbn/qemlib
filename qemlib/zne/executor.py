@@ -40,7 +40,7 @@ class EstimatorExecutor:
         self.session = session
 
         self.estimator = Estimator(
-            backend=backend,
+            mode=backend,
             session=session,
             options={"default_shots": shots},
         )
