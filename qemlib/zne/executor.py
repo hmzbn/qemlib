@@ -14,7 +14,6 @@ class EstimatorExecutor:
         observable: SparsePauliOp to evaluate.
         parameter_values: Optional parameter values for parameterized circuits.
         shots: Number of measurement shots.
-        session: Optional Qiskit Runtime session.
     """
 
     def __init__(
@@ -23,7 +22,6 @@ class EstimatorExecutor:
         observable,
         parameter_values=None,
         shots: int = 100_000,
-        session=None,
     ):
         """
         Parameters
@@ -32,16 +30,13 @@ class EstimatorExecutor:
         observable : SparsePauliOp
         parameter_values : array-like or None
         shots : int
-        session : qiskit_ibm_runtime.Session or None
         """
         self.backend = backend
         self.observable = observable
         self.parameter_values = parameter_values
-        self.session = session
 
         self.estimator = Estimator(
             mode=backend,
-            session=session,
             options={"default_shots": shots},
         )
 
