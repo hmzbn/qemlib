@@ -1,8 +1,11 @@
-from .folding import fold_global_circuit
 from .zne import ZeroNoiseExtrapolator
-from .functional import run_zne
+from .folding import fold_global_circuit
+from .models import extrapolate
+from .plotting import plot_zne
 
 __all__ = [
     "ZeroNoiseExtrapolator",
-    "run_zne",
+    "fold_global_circuit",
+    "extrapolate",
+    "plot_zne",
 ]
