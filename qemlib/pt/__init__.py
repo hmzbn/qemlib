@@ -1,3 +1,7 @@
-from .runner import run_pt
-from .twirl import twirl_cx
-from .pauli import random_pauli, PAULIS_CNOT, PAULIS_ECR
+from .pt import PauliTwirler
+from .twirl import twirl_circuit
+
+__all__ = [
+    "PauliTwirler",
+    "twirl_circuit",
+]
