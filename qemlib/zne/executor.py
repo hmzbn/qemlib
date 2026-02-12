@@ -2,13 +2,19 @@ from qiskit.transpiler.preset_passmanagers import generate_preset_pass_manager
 from qiskit_ibm_runtime import EstimatorV2 as Estimator
 
 
-class EstimatorV2Executor:
+class EstimatorExecutor:
     """
-    Executor wrapper compatible with Qiskit Estimator V2.
+    Executor wrapper compatible with Qiskit Estimator (V2).
 
-    Works with:
-    - AerSimulator (local mode)
-    - IBM Runtime backends (inside Session)
+    This class provides a callable interface suitable for
+    Zero-Noise Extrapolation workflows.
+
+    Args:
+        backend: Qiskit backend (AerSimulator or IBM backend).
+        observable: SparsePauliOp to evaluate.
+        parameter_values: Optional parameter values for parameterized circuits.
+        shots: Number of measurement shots.
+        session: Optional Qiskit Runtime session.
     """
 
     def __init__(
