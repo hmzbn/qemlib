@@ -20,24 +20,24 @@ def exponential_model(x, a, b, c):
 
 def extrapolate(xdata, ydata, method="linear"):
     """
-    Perform zero-noise extrapolation.
+    Perform zero-noise extrapolation on expectation values.
 
     Parameters
     ----------
     xdata : array-like
         Noise scaling factors.
     ydata : array-like
-        Expectation values.
+        Expectation values measured at the scale factors.
     method : str
-        'linear', 'quadratic', or 'exponential'.
+        The extrapolation model to use:'linear', 'quadratic', or 'exponential'.
 
     Returns
     -------
     dict
         {
-            "zero_noise_value": float,
-            "fit_params": tuple,
-            "fit_function": callable
+            "zero_noise_value": float, Extrapolated value at scale = 0
+            "fit_params": tuple, Fitted model parameters
+            "fit_function": callable, The fitted model function
         }
     """
     xdata = np.asarray(xdata)
