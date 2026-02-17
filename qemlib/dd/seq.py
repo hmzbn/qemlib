@@ -2,6 +2,9 @@ from qiskit import QuantumCircuit
 
 
 def xx(slack_length: int) -> QuantumCircuit:
+    """
+    XX dynamical decoupling sequence.
+    """
     qc = QuantumCircuit(1)
     for _ in range(slack_length // 2):
         qc.x(0)
@@ -10,6 +13,9 @@ def xx(slack_length: int) -> QuantumCircuit:
 
 
 def xp_xm(slack_length: int) -> QuantumCircuit:
+    """
+    X −X dynamical decoupling sequence.
+    """
     qc = QuantumCircuit(1)
     for _ in range(slack_length // 2):
         qc.x(0)
@@ -18,6 +24,9 @@ def xp_xm(slack_length: int) -> QuantumCircuit:
 
 
 def xy4(slack_length: int) -> QuantumCircuit:
+    """
+    XY4 DD sequence.
+    """
     qc = QuantumCircuit(1)
     base = ["x", "y", "x", "y"]
 
