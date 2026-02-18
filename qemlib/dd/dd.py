@@ -13,7 +13,7 @@ def run_dd(circuit, executor, sequence=xx, trials=1):
     executor : callable
         executor(circuit) -> expectation value
     sequence : callable
-        DD rule function (e.g., xx, xp_xm, xy4).
+        DD sequence function (e.g., xx, xp_xm, xy4).
         Must accept slack_length and return a 1-qubit circuit.
     trials : int
         Number of executions to average.
