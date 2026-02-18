@@ -45,15 +45,15 @@ def _compute_slack(mask):
     return slack
 
 
-def insert_dd_sequences(circuit: QuantumCircuit, rule):
+def insert_dd_sequences(circuit: QuantumCircuit, sequence):
     """
     Insert DD sequences into idle windows.
 
     Parameters
     ----------
     circuit : QuantumCircuit
-    rule : callable
-        rule(slack_length) -> QuantumCircuit(1)
+    sequence : callable
+        sequence(slack_length) -> QuantumCircuit(1)
 
     Returns
     -------
@@ -70,7 +70,7 @@ def insert_dd_sequences(circuit: QuantumCircuit, rule):
             slack_len = slack[q][moment]
 
             if slack_len > 1:
-                seq = rule(slack_len)
+                seq = sequence(slack_len)
 
                 for inst in seq.data:
                     new_qc.append(inst.operation, [q])
