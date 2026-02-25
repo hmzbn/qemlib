@@ -74,7 +74,7 @@ Create a feature branch
 Submit a pull request
 
 ## 📖 Citation
-If you use qemlib in academic work, please cite:
+If you use qemlib 'in' academic work, please cite:
 @software{qemlib,
   author = {Hamza Benkadour},
   title = {qemlib: A Modular Quantum Error Mitigation Library},
