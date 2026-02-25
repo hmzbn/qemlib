@@ -1,36 +1,33 @@
 from qiskit import QuantumCircuit
+import numpy as np
 
 
-def xx(slack_length: int) -> QuantumCircuit:
-    """
-    XX dynamical decoupling sequence.
-    """
+def xx_block() -> QuantumCircuit:
     qc = QuantumCircuit(1)
-    for _ in range(slack_length // 2):
-        qc.x(0)
-        qc.x(0)
+    qc.x(0)
+    qc.x(0)
     return qc
 
 
-def xp_xm(slack_length: int) -> QuantumCircuit:
-    """
-    X −X dynamical decoupling sequence.
-    """
+def xp_xm_block() -> QuantumCircuit:
     qc = QuantumCircuit(1)
-    for _ in range(slack_length // 2):
-        qc.x(0)
-        qc.rx(-3.141592653589793, 0)
+    qc.x(0)
+    qc.rx(-np.pi, 0)
     return qc
 
 
-def xy4(slack_length: int) -> QuantumCircuit:
-    """
-    XY4 DD sequence.
-    """
+def xy4_block() -> QuantumCircuit:
     qc = QuantumCircuit(1)
-    base = ["x", "y", "x", "y"]
-
-    for i in range(min(slack_length, 4)):
-        getattr(qc, base[i])(0)
-
+    qc.x(0)
+    qc.y(0)
+    qc.x(0)
+    qc.y(0)
     return qc
+
+
+# Metadata
+SEQUENCES = {
+    "xx": (xx_block, 2),
+    "xp_xm": (xp_xm_block, 2),
+    "xy4": (xy4_block, 4),
+}
