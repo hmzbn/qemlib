@@ -1,5 +1,8 @@
-# qemlib
-A modular Quantum Error Mitigation (QEM) library built on Qiskit. qemlib provides clean, research-oriented implementations of major quantum error mitigation techniques, including:
+qemlib
+
+A modular Quantum Error Mitigation (QEM) library built on Qiskit.
+
+qemlib provides clean, research-oriented implementations of major quantum error mitigation techniques, including:
 
 Dynamical Decoupling (DD)
 
@@ -12,22 +15,17 @@ Readout Error Mitigation (REM)
 The library is designed for experimentation, benchmarking, and research workflows in noisy quantum computation.
 
 📦 Installation
-🔹 Install from GitHub
-Using a Personal Access Token:
-
-Bash
-￼
+Install from GitHub
 pip install git+https://github.com/hmzbn/qemlib.git
 
-🚀 Quick Example
-See examples directory.
+🚀 Quick Start
+
+See the examples/ directory for complete usage demonstrations.
 
 🧠 Implemented Techniques
 1️⃣ Dynamical Decoupling (DD)
 
-Located in:
-
-qemlib/dd/
+Location: qemlib/dd/
 
 Modules:
 
@@ -49,9 +47,7 @@ Custom sequences can be added in seq.py.
 
 2️⃣ Zero Noise Extrapolation (ZNE)
 
-Located in:
-
-qemlib/zne/
+Location: qemlib/zne/
 
 Modules:
 
@@ -59,9 +55,9 @@ zne.py — Core ZNE logic
 
 folding.py — Circuit folding methods
 
-functional.py — Runing zne
+functional.py — ZNE execution workflow
 
-models.py — Extrapolation functions 
+models.py — Extrapolation functions
 
 executor.py — Execution abstraction
 
@@ -69,9 +65,7 @@ plotting.py — Visualization utilities
 
 3️⃣ Pauli Twirling (PT)
 
-Located in:
-
-qemlib/pt/
+Location: qemlib/pt/
 
 Modules:
 
@@ -81,21 +75,19 @@ pauli.py — Pauli operator utilities
 
 twirl.py — Twirling transformations
 
-Used to randomize coherent errors into stochastic Pauli channels.
+Pauli Twirling is used to randomize coherent errors into stochastic Pauli channels.
 
 4️⃣ Readout Error Mitigation (REM)
 
-Located in:
-
-qemlib/rem/
+Location: qemlib/rem/
 
 Modules:
 
 rem.py — Readout calibration and mitigation tools
 
-Supports measurement calibration and compute expectation value workflow.
+Supports measurement calibration and expectation value computation workflows.
 
-📂 Full Project Structure
+📂 Project Structure
 qemlib/
 │
 ├── examples/
@@ -156,15 +148,11 @@ Minimal abstraction overhead
 
 Research-oriented flexibility
 
-Qiskit-native circuit compatibility
+Full compatibility with Qiskit circuits
 
 📊 Example Notebooks
 
-Example usage and experiments are provided in:
-
-examples/
-
-Including:
+Example usage and experiments are provided in the examples/ directory, including:
 
 DD experiments
 
@@ -172,15 +160,16 @@ ZNE experiments
 
 Pauli Twirling benchmarks
 
-Readout mitigation demos
+Readout mitigation demonstrations
 
 📜 License
 
-MIT License — see LICENSE file.
+This project is released under the MIT License.
+See the LICENSE file for details.
 
 🤝 Contributing
 
-Contributions are welcome.
+Contributions are welcome:
 
 Fork the repository
 
