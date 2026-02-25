@@ -102,4 +102,4 @@ If you use **qemlib** in academic work, please cite:
 ---
 
 Happy mitigating! 😊
-```
+
