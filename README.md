@@ -11,15 +11,14 @@ A modular **Quantum Error Mitigation (QEM)** library built on Qiskit.
 
 The library is designed for experimentation, benchmarking, and research workflows in noisy quantum computation.
 
----
+```bash
 
 ## 📦 Installation
 
 ### Install from GitHub
 
-```bash
+
 pip install git+https://github.com/hmzbn/qemlib.git
-```
 
 ## 🚀 Quick Start
 
