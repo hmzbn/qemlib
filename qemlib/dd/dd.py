@@ -1,8 +1,7 @@
 from .insertion import insert_dd_sequences
-from .seq import xx
 
 
-def run_dd(circuit, executor, sequence=xx, trials=1):
+def run_dd(circuit, executor, sequence="xx", trials=1):
     """
     Run Dynamical Decoupling (DD) with circuit-level insertion.
 
@@ -23,7 +22,7 @@ def run_dd(circuit, executor, sequence=xx, trials=1):
     tuple
         (average_value, values_list)
     """
-    
+
     values = []
 
     for _ in range(trials):
