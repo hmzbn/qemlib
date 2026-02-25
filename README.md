@@ -2,24 +2,7 @@
 
 A modular **Quantum Error Mitigation (QEM)** library built on Qiskit.
 
-> `qemlib` provides clean, research-oriented implementations of major quantum error mitigation techniques, designed for experimentation, benchmarking, and research workflows in noisy quantum computation.
-
----
-
-## 📌 Table of Contents
-1. [Features](#features)
-2. [Installation](#installation)
-3. [Quick Start](#quick-start)
-4. [Examples](#examples)
-5. [Implemented Techniques](#implemented-techniques)
-   - [Dynamical Decoupling (DD)](#dynamical-decoupling-dd)
-   - [Zero Noise Extrapolation (ZNE)](#zero-noise-extrapolation-zne)
-   - [Pauli Twirling (PT)](#pauli-twirling-pt)
-   - [Readout Error Mitigation (REM)](#readout-error-mitigation-rem)
-6. [Architecture & Design Principles](#architecture--design-principles)
-7. [Contributing](#contributing)
-8. [License](#license)
-9. [Citation](#citation)
+> `qemlib` provides research-oriented implementations of major quantum error mitigation techniques, designed for experimentation, benchmarking, and research workflows in noisy quantum computation.
 
 ---
 
@@ -38,7 +21,6 @@ Install directly from GitHub:
 ```bash
 pip install git+https://github.com/hmzbn/qemlib.git
 ```
-
 
 ## ⚡ Quick Start
 See the [`examples/`](examples) directory for complete usage demonstrations of all implemented mitigation techniques.
