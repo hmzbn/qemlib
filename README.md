@@ -16,10 +16,10 @@ A modular **Quantum Error Mitigation (QEM)** library built on Qiskit.
 
 
 ## 📦 Installation
-Install directly from GitHub:
+Install from PyPI:
 
 ```bash
-pip install git+https://github.com/hmzbn/qemlib.git
+pip install qemlib
 ```
 
 ## ⚡ Quick Start
