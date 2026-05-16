@@ -9,7 +9,7 @@ version = "0.1.0"
 description = "A modular quantum error mitigation library (ZNE, PT, DD, REM)"
 readme = "README.md"
 requires-python = ">=3.9"
-license = { text = "MIT" }
+license = { file = "LICENSE" }
 
 authors = [
   { name = "Hamza Benkadour" }
@@ -32,5 +32,4 @@ classifiers = [
 
 
 [tool.setuptools]
-license-files = ["LICENSE"]
 packages = ["qemlib", "qemlib.zne", "qemlib.pt", "qemlib.dd", "qemlib.rem"]
