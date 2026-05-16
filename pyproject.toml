@@ -9,7 +9,7 @@ version = "0.1.0"
 description = "A modular quantum error mitigation library (ZNE, PT, DD, REM)"
 readme = "README.md"
 requires-python = ">=3.9"
-license = { file = "LICENSE" }
+license_files = ["LICENSE"]
 
 authors = [
   { name = "Hamza Benkadour" }
