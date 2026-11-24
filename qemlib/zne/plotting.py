@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from .models import extrapolate
 
 
-def plot_zne(scales, values, ref_value=None, methods=("linear",)):
+def plot_zne(scales, values, ref_value=None, methods=("linear", "quadratic", "exponential")):
     """
     Plots noisy expectation values and their zero-noise extrapolation fits.
 
