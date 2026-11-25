@@ -6,24 +6,26 @@ from qiskit.quantum_info import SparsePauliOp
 
 
 # Executor
-def counts_executor(backend, shots: int = 1024) -> Callable:
+def counts_executor(backend, shots: int = 1024, pass_manager=None) -> Callable:
     """
-    Creates an executor function returning counts.
+    Creates an executor returning counts.
 
     Args:
-        backend: Qiskit backend
-        shots: Number of shots
-
-    Returns:
-        Callable[[QuantumCircuit], Dict[str, int]]
+        backend: Qiskit backend.
+        shots: Number of shots.
+        pass_manager: Optional preset pass manager (with a fixed initial_layout)
+            applied to every circuit, so calibration and measurement circuits
+            run on the same physical qubits.
     """
     def executor(circuit: QuantumCircuit) -> Dict[str, int]:
+        if circuit.parameters:
+            raise ValueError("Circuit has unbound parameters; call assign_parameters first.")
+        if pass_manager is not None:
+            circuit = pass_manager.run(circuit)
         job = backend.run(circuit, shots=shots)
-        result = job.result()
-        return result.get_counts()
+        return job.result().get_counts()
 
     return executor
-
 
 # Readout Mitigator
 class ReadoutMitigator:
